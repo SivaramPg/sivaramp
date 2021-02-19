@@ -6,6 +6,7 @@ const ContainerStyles = styled.div`
   margin: 0 auto;
 
   display: flex;
+  flex-flow: row wrap;
   position: relative;
 
   @media screen and (max-width: 1200px) {
