@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import Container from '../components/Container';
+import NavDropDown from './NavDropDown';
 
 const NavbarWrapper = styled.nav`
   width: 100%;
@@ -21,7 +23,7 @@ const NavbarWrapper = styled.nav`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   padding: 0 50px;
-  z-index: 100;
+  z-index: 150;
 
   & > div {
     justify-content: space-between;
@@ -42,28 +44,47 @@ const NavbarWrapper = styled.nav`
       display: inline-block;
       margin: 0 30px 0 30px;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    @media screen and (min-width: 768px) {
+      display: none;
     }
   }
 `;
 
 export default function Navbar() {
+  const [showNavDropDown, setShowNavDropDown] = useState(false);
   return (
-    <NavbarWrapper>
-      <Container>
-        <Link href="/">
-          <a>
-            <img src="/logo.svg" alt="logo" />
-          </a>
-        </Link>
-        <ul>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/#projects">Projects</NavLink>
-          <NavLink href="/#skills">Skills</NavLink>
-          <NavLink href="/#contact-me">Contact Me</NavLink>
-          <GiHamburgerMenu size="2em" style={{ display: 'inline-block' }} />
-        </ul>
-      </Container>
-    </NavbarWrapper>
+    <>
+      <NavbarWrapper>
+        <Container>
+          <Link href="/">
+            <a>
+              <img src="/logo.svg" alt="logo" />
+            </a>
+          </Link>
+          <ul>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/#skills">Skills</NavLink>
+            <NavLink href="/#projects">Projects</NavLink>
+            <NavLink href="/#contact-me">Contact Me</NavLink>
+            <GiHamburgerMenu
+              className="icon"
+              size="2em"
+              onClick={() => setShowNavDropDown((prevState) => !prevState)}
+            />
+          </ul>
+        </Container>
+      </NavbarWrapper>
+      {showNavDropDown && <NavDropDown />}
+    </>
   );
 }
 
