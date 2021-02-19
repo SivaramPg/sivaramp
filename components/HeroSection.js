@@ -11,7 +11,7 @@ import {
 
 const HeroSectionWrapper = styled.section`
   width: 100%;
-  height: calc(100vh + 200px);
+  height: calc(100vh);
 
   background: linear-gradient(
     294deg,
@@ -93,13 +93,10 @@ export default function HeroSection() {
     <HeroSectionWrapper>
       <Container>
         <header>
-          <h1>👋👋&nbsp;Hey there!,</h1>
+          <h1>👋🏼👋🏼&nbsp;Hey there!,</h1>
           <h1>
             I am <span>Sivaram Pandariganthan</span>
           </h1>
-          {/*
-            // TODO Add Typing section here.
-         */}
           <Typing />
           <div>
             <GithubSocialLink size="2em" />
