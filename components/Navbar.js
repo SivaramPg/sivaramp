@@ -2,10 +2,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu, GiSkills } from 'react-icons/gi';
+import { FaHome, FaLaptopCode } from 'react-icons/fa';
 
 import Container from '../components/Container';
 import NavDropDown from './NavDropDown';
+import { SiMinutemailer } from 'react-icons/si';
 
 const NavbarWrapper = styled.nav`
   width: 100%;
@@ -31,7 +33,6 @@ const NavbarWrapper = styled.nav`
 
   img {
     width: 150px;
-    transition: all 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
     margin-top: 10px;
   }
 
@@ -40,13 +41,30 @@ const NavbarWrapper = styled.nav`
     align-items: center;
     list-style-type: none;
 
-    & > a > li {
-      display: inline-block;
-      margin: 0 30px 0 30px;
+    & li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px 0 10px;
       cursor: pointer;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: all 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+      :hover {
+        background-color: #00000005;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
 
       @media screen and (max-width: 768px) {
         display: none;
+      }
+
+      svg {
+        margin-right: 10px;
+        color: black;
+        color: #3d3d3d;
       }
     }
   }
@@ -71,10 +89,20 @@ export default function Navbar() {
             </a>
           </Link>
           <ul>
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/#skills">Skills</NavLink>
-            <NavLink href="/#projects">Projects</NavLink>
-            <NavLink href="/#contact-me">Contact Me</NavLink>
+            <NavLink href="/">
+              <FaHome size="1.25em" />
+              Home
+            </NavLink>
+            <NavLink href="/#skills">
+              <GiSkills size="1.25em" />
+              Skills
+            </NavLink>
+            <NavLink href="/#projects">
+              <FaLaptopCode size="1.25em" /> Projects
+            </NavLink>
+            <NavLink href="/#contact-me">
+              <SiMinutemailer size="1.25em" /> Contact Me
+            </NavLink>
             <GiHamburgerMenu
               className="icon"
               size="2em"
