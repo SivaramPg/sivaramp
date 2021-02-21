@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { ImHtmlFive } from 'react-icons/im';
@@ -26,7 +27,7 @@ import Container from './Container';
 import SectionTitle from './SectionTitle';
 import SkillsBlock from './SkillsBlock';
 
-const SectionWrapper = styled.section`
+const SkillsSectionWrapper = styled.section`
   width: 100%;
   height: 100vh;
   background: linear-gradient(
@@ -79,9 +80,9 @@ const SectionWrapper = styled.section`
   }
 `;
 
-export default function Section() {
+export default function SkillsSection() {
   return (
-    <SectionWrapper>
+    <SkillsSectionWrapper id="skills">
       <div>
         <Container>
           <SectionTitle>Skills</SectionTitle>
@@ -114,6 +115,6 @@ export default function Section() {
           </div>
         </Container>
       </div>
-    </SectionWrapper>
+    </SkillsSectionWrapper>
   );
 }
