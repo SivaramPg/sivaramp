@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "express-rate-limit": "^5.2.6",
     "formik": "^2.2.6",
     "next": "10.0.6",
     "react": "17.0.1",
