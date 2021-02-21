@@ -5,13 +5,14 @@ import SectionTitle from './SectionTitle';
 
 const ContactSectionWrapper = styled.section`
   width: 100%;
-  /* height: 100vh; */
-  min-height: 800px;
+  height: 100vh;
+  min-height: 950px;
   background: linear-gradient(
     -114deg,
     rgba(48, 182, 160, 0.1),
     rgba(48, 191, 171, 0.6)
   );
+  /* background: linear-gradient(to top right, #89f7fe, #66a6ff); */
 
   h1 {
     width: 100%;
