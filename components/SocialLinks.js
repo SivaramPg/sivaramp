@@ -29,7 +29,7 @@ export const SocialLinkWrapper = styled.a`
 export function GithubSocialLink({ size }) {
   return (
     <SocialLinkWrapper
-      href="https://github.com/SivaramPg"
+      href="/github"
       target="_blank"
       rel="noreferrer noopener"
       data-tip="Github"
@@ -42,7 +42,7 @@ export function GithubSocialLink({ size }) {
 export function LinkedInSocialLink({ size }) {
   return (
     <SocialLinkWrapper
-      href="https://www.linkedin.com/in/sivaram-pandariganthan-b753a2145/"
+      href="/linkedin"
       target="_blank"
       rel="noreferrer noopener"
       data-tip="LinkedIn"
@@ -55,7 +55,7 @@ export function LinkedInSocialLink({ size }) {
 export function MediumSocialLink({ size }) {
   return (
     <SocialLinkWrapper
-      href="https://sivarampg95.medium.com/"
+      href="/blog"
       target="_blank"
       rel="noreferrer noopener"
       data-tip="Medium"
@@ -68,7 +68,7 @@ export function MediumSocialLink({ size }) {
 export function CodepenSocialLink({ size }) {
   return (
     <SocialLinkWrapper
-      href="https://codepen.io/kaizoku_95"
+      href="/codepen"
       target="_blank"
       rel="noreferrer noopener"
       data-tip="Codepen"
@@ -82,7 +82,7 @@ export function EmailSocialLink({ size }) {
   return (
     <>
       <SocialLinkWrapper
-        href="mailto:sivarampg95@gmail.com"
+        href="/mail"
         target="_blank"
         rel="noreferrer noopener"
         data-tip="Email"
