@@ -33,7 +33,8 @@ const Input = styled.input`
   border-radius: 5px;
   border: 2px solid white;
   padding: 5px 10px 5px 10px;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'Wotfard';
   caret-color: black;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
