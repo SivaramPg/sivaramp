@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     src: url('/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('/wotfard-regular-webfont.ttf') format('truetype'),
     url('/wotfard-regular-webfont.woff2') format('woff2');
+    font-display: swap;
   }
 
   @font-face {
@@ -31,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     url('/geomanist-regular-webfont.ttf') format('truetype'),
     url('/geomanist-regular-webfont.woff2') format('woff2'),
     url('/geomanist-regular-webfont.svg#webfont') format('svg');
+    font-display: swap;
   }
 
   html {
