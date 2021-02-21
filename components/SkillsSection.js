@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { ImHtmlFive } from 'react-icons/im';
