@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ReactTooltip = dynamic(() => import('react-tooltip'), { ssr: false });
 
 const GlobalStyle = createGlobalStyle`
