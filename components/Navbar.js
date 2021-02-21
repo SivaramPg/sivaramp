@@ -89,7 +89,16 @@ export default function Navbar() {
             </a>
           </Link>
           <ul>
-            <NavLink href="/">
+            <NavLink
+              href="/"
+              onClick={() =>
+                window.scroll({
+                  top: 0,
+                  left: 0,
+                  behavior: 'smooth',
+                })
+              }
+            >
               <FaHome size="1.25em" />
               Home
             </NavLink>
@@ -116,10 +125,10 @@ export default function Navbar() {
   );
 }
 
-function NavLink({ href, children }) {
+function NavLink({ href, children, onClick = () => null }) {
   return (
     <Link href={href}>
-      <a>
+      <a onClick={onClick}>
         <li>{children}</li>
       </a>
     </Link>
