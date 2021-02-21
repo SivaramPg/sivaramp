@@ -12,6 +12,7 @@ const ProjectsSectionWrapper = styled.section`
     rgba(48, 182, 160, 0.1),
     rgba(48, 191, 171, 0.6)
   );
+  padding-top: 40px;
 
   .projects {
     width: 100%;
