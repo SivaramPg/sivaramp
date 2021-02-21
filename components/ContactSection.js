@@ -40,7 +40,7 @@ const ContactSectionWrapper = styled.section`
 
 export default function ContactSection() {
   return (
-    <ContactSectionWrapper>
+    <ContactSectionWrapper id="contact-me">
       <Container style={{ alignItems: 'center' }}>
         <SectionTitle>Contact Me</SectionTitle>
         <section className="illustration-section">
