@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
     url('/geomanist-regular-webfont.svg#webfont') format('svg');
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     box-sizing: border-box;
     font-family: 'geomanist', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
