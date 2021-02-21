@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
+import { toast } from 'react-toastify';
 
 import FormInput from './FormInput';
 import FormTextArea from './FormTextArea';
@@ -69,9 +70,27 @@ function ContactForm() {
     []
   );
 
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = async (values, { resetForm }) => {
     console.log(values);
-    resetForm();
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      const status = response.status;
+      if (status === 429) {
+        toast.error(await response.text());
+      } else {
+        toast.success('Message was sent successfully!');
+        resetForm();
+      }
+    } catch (error) {
+      console.error('Error', error);
+      toast.error(error.message || JSON.stringify(error));
+    }
   };
 
   return (
@@ -89,12 +108,14 @@ function ContactForm() {
         {(props) => (
           <Form>
             <FormInput
+              type="text"
               name="emailId"
               label="Email ID"
               placeholder="Email Id"
               autoComplete="off"
             />
             <FormInput
+              type="text"
               name="subject"
               label="Subject"
               placeholder="Subject"
