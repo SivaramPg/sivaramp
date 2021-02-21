@@ -18,6 +18,7 @@ import {
   SiMongodb,
   SiHeroku,
   SiIonic,
+  SiFirebase,
 } from 'react-icons/si';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 
@@ -107,6 +108,7 @@ export default function Section() {
             <SkillsBlock title="Cloud Providers">
               <FaAws data-tip="Amazon Web Services" />
               <SiDigitalocean data-tip="DigitalOcean" />
+              <SiFirebase data-tip="Firebase" />
               <SiHeroku data-tip="Heroku" />
             </SkillsBlock>
           </div>
