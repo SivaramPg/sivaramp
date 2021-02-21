@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
+
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer';
@@ -24,6 +26,18 @@ export default function Home() {
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        limit={2}
+      />
     </div>
   );
 }
