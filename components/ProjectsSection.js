@@ -28,7 +28,7 @@ const ProjectsSectionWrapper = styled.section`
 
 export default function ProjectsSection() {
   return (
-    <ProjectsSectionWrapper>
+    <ProjectsSectionWrapper id="projects">
       <Container>
         <SectionTitle>Projects</SectionTitle>
         <div className="projects">
@@ -36,37 +36,43 @@ export default function ProjectsSection() {
             thumbnail="/url-masker.png"
             title="URL Masker"
             websiteUrl="https://url-masker.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/url-masker"
+            githubUrl="/github/url-masker"
           />
           <ProjectCard
             thumbnail="/faceapp.png"
             title="Face Recognition"
             websiteUrl="https://faceapp.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/Face-Recognition-App"
+            githubUrl="/github/Face-Recognition-App"
           />
           <ProjectCard
             thumbnail="/js-snake-game.png"
             title="JS Snake Game"
             websiteUrl="https://snake.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/JS_Snake_Game"
+            githubUrl="/github/JS_Snake_Game"
           />
-          <ProjectCard
+          {/* <ProjectCard
             thumbnail="/swapi-ssg.png"
             title="SWAPI-SSG"
             websiteUrl="https://starwars.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/swapi-ssg"
+            githubUrl="/github/swapi-ssg"
+          /> */}
+          <ProjectCard
+            thumbnail="/swapi-deux.png"
+            title="Star Wars API"
+            websiteUrl="https://swapi-deux.sivaramp.com/"
+            githubUrl="/github/swapi-deux"
           />
           <ProjectCard
             thumbnail="/json-prettier.png"
             title="JSON Prettier"
             websiteUrl="https://json.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/json-prettier"
+            githubUrl="/github/json-prettier"
           />
           <ProjectCard
             thumbnail="/linear-gradient.png"
             title="Linear Gradients"
             websiteUrl="https://bg.sivaramp.com/"
-            githubUrl="https://github.com/SivaramPg/Gradient-Background-Generator"
+            githubUrl="/github/Gradient-Background-Generator"
           />
         </div>
       </Container>
