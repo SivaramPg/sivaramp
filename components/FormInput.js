@@ -44,7 +44,7 @@ const Input = styled.input`
   }
   &:valid ~ label,
   &:focus ~ label {
-    color: #7d7d7d;
+    color: #000;
     font-size: 16px;
     transform: translateY(-50%);
   }

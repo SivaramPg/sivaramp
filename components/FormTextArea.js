@@ -45,7 +45,7 @@ const TextArea = styled.textarea`
   }
   &:valid ~ label,
   &:focus ~ label {
-    color: #999;
+    color: #000;
     font-size: 16px;
     transform: translateY(-50%);
   }
