@@ -7,8 +7,18 @@ const SectionTitleElement = styled.h2`
   font-size: 48px;
   position: relative;
   margin-bottom: 20px;
+
+  span {
+    color: #00000099;
+  }
 `;
 
 export default function SectionTitle({ children }) {
-  return <SectionTitleElement>__{children}__</SectionTitleElement>;
+  return (
+    <SectionTitleElement>
+      <span>__</span>
+      {children}
+      <span>__</span>
+    </SectionTitleElement>
+  );
 }
