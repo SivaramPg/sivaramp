@@ -34,7 +34,7 @@ const SkillsSectionWrapper = styled.section`
     rgba(48, 182, 160, 0.1),
     rgba(48, 191, 171, 0.6)
   );
-  overflow-x: hidden;
+  overflow: hidden;
 
   & > div {
     width: 120%;
