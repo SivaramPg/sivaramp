@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 
 import FormInput from './FormInput';
 import FormTextArea from './FormTextArea';
+import { respondTo } from '../utils/respondTo';
 
 const ContactFormWrapper = styled.div`
   width: 75%;
@@ -15,6 +16,10 @@ const ContactFormWrapper = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
   padding: 20px;
+
+  ${respondTo.xs`
+    width: 90%;
+  `}
 
   h3 {
     width: 100%;
