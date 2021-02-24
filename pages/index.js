@@ -14,6 +14,8 @@ export default function Home() {
       <Head>
         <meta charSet="UTF-8" />
         <meta lang="english" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="My Portfolio Website. I am a full stack web developer from India with 2+ years of experience in creating optimized, responsive, interactive, user-friendly and feature-rich websites and web applications."
@@ -23,8 +25,14 @@ export default function Home() {
           property="og:description"
           content="My Portfolio Website. I am a full stack web developer from India with 2+ years of experience in creating optimized, responsive, interactive, user-friendly and feature-rich websites and web applications."
         />
-        <meta property="og:image" content="http://sivaramp.com/avataar.png" />
+        <meta
+          name="image"
+          property="og:image"
+          content="http://sivaramp.com/avataar.png"
+        />
         <meta property="og:url" content="http://sivaramp.com" />
+        <meta name="author" content="Sivaram Pandariganthan" />
+        <meta property="og:type" content="portfolio" />
         <title>Sivaram's Website</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
