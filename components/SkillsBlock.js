@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { respondTo } from '../utils/respondTo';
 
 const SkillsBlockWrapper = styled.div`
   width: 45%;
@@ -17,6 +18,11 @@ const SkillsBlockWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
+  ${respondTo.xs`
+    width: 90%;
+    margin: 15px 0;
+  `}
+
   h3 {
     width: 100%;
     display: block;
@@ -25,6 +31,10 @@ const SkillsBlockWrapper = styled.div`
 
     font-size: 24px;
     color: #3d3d3d;
+
+    ${respondTo.xs`
+      margin: 10px 0 10px 0;
+    `}
   }
 `;
 

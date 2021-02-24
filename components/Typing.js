@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 import Typist from 'react-typist';
+import { respondTo } from '../utils/respondTo';
 
 const TypingWrapper = styled.section`
   width: auto;
@@ -20,9 +21,16 @@ const TypingWrapper = styled.section`
   justify-content: flex-start;
   align-items: center;
 
+  ${respondTo.sm`
+        padding: 10px;
+  `}
+
   h1 {
     font-size: 32px;
     font-weight: normal;
+    ${respondTo.sm`
+        font-size: 20px;
+    `}
   }
 
   h1.typing {

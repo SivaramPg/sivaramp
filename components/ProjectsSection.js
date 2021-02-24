@@ -5,20 +5,17 @@ import SectionTitle from './SectionTitle';
 
 const ProjectsSectionWrapper = styled.section`
   width: 100%;
-  /* height: 100vh; */
   min-height: 1000px;
   background: linear-gradient(
     294deg,
     rgba(48, 182, 160, 0.1),
     rgba(48, 191, 171, 0.6)
   );
-  padding-top: 40px;
 
   .projects {
     width: 100%;
     margin-top: 50px;
     height: 100%;
-    /* background-color: pink; */
 
     display: flex;
     justify-content: center;

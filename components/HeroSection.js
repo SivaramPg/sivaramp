@@ -8,10 +8,12 @@ import {
   EmailSocialLink,
   SocialLinkWrapper,
 } from '../components/SocialLinks';
+import { respondTo } from '../utils/respondTo';
 
 const HeroSectionWrapper = styled.section`
   width: 100%;
-  height: calc(100vh);
+  height: 100vh;
+  min-height: 800px;
 
   background: linear-gradient(
     294deg,
@@ -24,13 +26,39 @@ const HeroSectionWrapper = styled.section`
   align-items: center;
   flex-flow: row nowrap;
 
+  ${respondTo.md`
+      min-height: 800px;
+  `}
+  ${respondTo.sm`
+    min-height: 600px;
+  `}
+  ${respondTo.xs`
+    min-height: 500;
+    height: calc(100vh - 72px);
+  `}
+
+  & > div {
+    flex-flow: row wrap;
+  }
+
   header,
   aside {
-    flex: 0 0 50%;
-    height: 100vh;
+    width: 50%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ${respondTo.md`
+      width: 100%;
+    `}
+  }
+
+  aside {
+    order: 2;
+    ${respondTo.md`
+      order: 1;
+    `}
   }
 
   h1 {
@@ -38,13 +66,27 @@ const HeroSectionWrapper = styled.section`
   }
 
   header {
+    order: 1;
     align-items: flex-start;
     flex-flow: column nowrap;
+
+    ${respondTo.md`
+      order: 2;
+      align-items: center;
+    `}
 
     & > h1 {
       font-size: 32px;
       margin: 0 20px;
       font-weight: 400;
+
+      ${respondTo.md`
+          margin: 0;
+          text-align: center;
+      `}
+      ${respondTo.sm`
+        font-size: 24px;
+      `}
 
       span {
         font-weight: 700;
@@ -54,6 +96,9 @@ const HeroSectionWrapper = styled.section`
       &:first-of-type {
         margin-top: 100px;
         margin-bottom: 90px;
+        ${respondTo.md`
+          margin: 20px 0;
+        `}
       }
 
       &:last-of-type {
@@ -64,6 +109,13 @@ const HeroSectionWrapper = styled.section`
     & > div {
       display: flex;
       padding: 90px 0 0 0;
+
+      ${respondTo.md`
+        padding: 40px 0 0 0;
+      `}
+      ${respondTo.sm`
+        padding-bottom: 20px;
+      `}
 
       ${SocialLinkWrapper} {
         width: 50px;
@@ -84,7 +136,16 @@ const HeroSectionWrapper = styled.section`
   }
 
   img {
-    width: 600px;
+    width: 100%;
+    ${respondTo.lg`
+      width: 500px;
+    `}
+    ${respondTo.md`
+      width: 300px;
+    `}
+    ${respondTo.xs`
+      width: 200px;
+    `}
   }
 `;
 

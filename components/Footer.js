@@ -8,6 +8,7 @@ import {
   CodepenSocialLink,
   EmailSocialLink,
 } from '../components/SocialLinks';
+import { respondTo } from '../utils/respondTo';
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -27,10 +28,12 @@ const FooterWrapper = styled.footer`
     position: absolute;
     top: -200px;
     left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     align-items: center;
 
-    background: url('/wave.svg');
+    background-image: url('/wave.svg');
     animation: 60s scroll infinite linear;
     animation-direction: alternate;
 
@@ -39,6 +42,20 @@ const FooterWrapper = styled.footer`
         background-position: -3000px 0px;
       }
     }
+
+    ${respondTo.sm`
+      top: -150px;
+    `}
+    ${respondTo.xs`
+      top: -100px;
+    `}
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: row wrap;
   }
 
   div > div:nth-of-type(1) {
@@ -49,18 +66,48 @@ const FooterWrapper = styled.footer`
 
     p {
       color: white;
+      margin-bottom: 30px;
+      ${respondTo.sm`
+        margin-bottom: 20px;
+      `}
+      ${respondTo.xs`
+        font-size: 14px;
+      `}
     }
 
     p:nth-of-type(2) {
       font-size: 12px;
+      margin-bottom: 0;
     }
+
+    ${respondTo.lg`
+      width: 45%;
+    `}
+    ${respondTo.md`
+      width: 45%;
+    `}
+    ${respondTo.sm`
+          width: 100%;
+          align-items: center;
+          margin-bottom: 30px;
+    `}
   }
 
   div > div:nth-of-type(2) {
     width: 60%;
     display: flex;
     justify-content: flex-end;
-    /* align-items: center; */
+
+    ${respondTo.lg`
+      width: 45%;
+    `}
+    ${respondTo.md`
+      width: 45%;
+    `}
+    ${respondTo.sm`
+      width: 100%;
+      justify-content: center;
+    `}
   }
 `;
 
@@ -75,9 +122,6 @@ export default function Footer() {
             <FaHeart style={{ color: 'red' }} />
             &nbsp; by Sivaram Pandariganthan
           </p>
-          <br />
-          <br />
-          <br />
           <p>
             &#169; 2020-present Sivaram Pandariganthan. All Rights Reserved.
           </p>

@@ -4,18 +4,23 @@ import styled from 'styled-components';
 
 import { GiHamburgerMenu, GiSkills } from 'react-icons/gi';
 import { FaHome, FaLaptopCode } from 'react-icons/fa';
+import { SiMinutemailer } from 'react-icons/si';
 
 import Container from '../components/Container';
 import NavDropDown from './NavDropDown';
-import { SiMinutemailer } from 'react-icons/si';
+import { respondTo } from '../utils/respondTo';
 
 const NavbarWrapper = styled.nav`
   width: 100%;
-  height: 72px;
+  max-height: ${(props) => (props.showNavDropDown ? '100vh' : '72px')};
+
+  transition: max-height 0.25s ease-in-out;
+  overflow: hidden;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: row wrap;
 
   position: fixed;
   top: 0;
@@ -27,8 +32,21 @@ const NavbarWrapper = styled.nav`
   padding: 0 50px;
   z-index: 150;
 
+  ${respondTo.md`
+    padding: 0 20px;
+  `}
+  ${respondTo.sm`
+    padding: 0 25px;
+    position: relative;
+  `}
+
   & > div {
     justify-content: space-between;
+
+    & > a,
+    & > ul {
+      padding: 6px 0;
+    }
   }
 
   img {
@@ -36,7 +54,7 @@ const NavbarWrapper = styled.nav`
     margin-top: 10px;
   }
 
-  ul {
+  .nav-links {
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -79,49 +97,48 @@ const NavbarWrapper = styled.nav`
 
 export default function Navbar() {
   const [showNavDropDown, setShowNavDropDown] = useState(false);
+
   return (
-    <>
-      <NavbarWrapper>
-        <Container>
-          <Link href="/">
-            <a>
-              <img src="/logo.svg" alt="logo" />
-            </a>
-          </Link>
-          <ul>
-            <NavLink
-              href="/"
-              onClick={() =>
-                window.scroll({
-                  top: 0,
-                  left: 0,
-                  behavior: 'smooth',
-                })
-              }
-            >
-              <FaHome size="1.25em" />
-              Home
-            </NavLink>
-            <NavLink href="/#skills">
-              <GiSkills size="1.25em" />
-              Skills
-            </NavLink>
-            <NavLink href="/#projects">
-              <FaLaptopCode size="1.25em" /> Projects
-            </NavLink>
-            <NavLink href="/#contact-me">
-              <SiMinutemailer size="1.25em" /> Contact Me
-            </NavLink>
-            <GiHamburgerMenu
-              className="icon"
-              size="2em"
-              onClick={() => setShowNavDropDown((prevState) => !prevState)}
-            />
-          </ul>
-        </Container>
-      </NavbarWrapper>
-      {showNavDropDown && <NavDropDown />}
-    </>
+    <NavbarWrapper showNavDropDown={showNavDropDown}>
+      <Container>
+        <Link href="/">
+          <a>
+            <img src="/logo.svg" alt="logo" />
+          </a>
+        </Link>
+        <ul className="nav-links">
+          <NavLink
+            href="/"
+            onClick={() =>
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
+              })
+            }
+          >
+            <FaHome size="1.25em" />
+            Home
+          </NavLink>
+          <NavLink href="/#skills">
+            <GiSkills size="1.25em" />
+            Skills
+          </NavLink>
+          <NavLink href="/#projects">
+            <FaLaptopCode size="1.25em" /> Projects
+          </NavLink>
+          <NavLink href="/#contact-me">
+            <SiMinutemailer size="1.25em" /> Contact Me
+          </NavLink>
+          <GiHamburgerMenu
+            className="icon"
+            size="2em"
+            onClick={() => setShowNavDropDown((prevState) => !prevState)}
+          />
+        </ul>
+      </Container>
+      <NavDropDown />
+    </NavbarWrapper>
   );
 }
 
