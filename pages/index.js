@@ -18,6 +18,13 @@ export default function Home() {
           name="description"
           content="My Portfolio Website. I am a full stack web developer from India with 2+ years of experience in creating optimized, responsive, interactive, user-friendly and feature-rich websites and web applications."
         />
+        <meta property="og:title" content="Sivaram's Website" />
+        <meta
+          property="og:description"
+          content="My Portfolio Website. I am a full stack web developer from India with 2+ years of experience in creating optimized, responsive, interactive, user-friendly and feature-rich websites and web applications."
+        />
+        <meta property="og:image" content="/avataar.png" />
+        <meta property="og:url" content="http://sivaramp.com" />
         <title>Sivaram's Website</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
