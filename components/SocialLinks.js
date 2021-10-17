@@ -5,7 +5,7 @@ import {
   SiLinkedin,
   SiMedium,
   SiCodepen,
-  SiMailDotRu,
+  SiMaildotru,
 } from 'react-icons/si';
 
 export const SocialLinkWrapper = styled.a`
@@ -87,7 +87,7 @@ export function EmailSocialLink({ size }) {
         rel="noreferrer noopener"
         data-tip="Email"
       >
-        <SiMailDotRu size={size ? size : '1.25em'} />
+        <SiMaildotru size={size ? size : '1.25em'} />
       </SocialLinkWrapper>
     </>
   );

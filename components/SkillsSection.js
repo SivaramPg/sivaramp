@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import {
   SiJavascript,
-  SiNextDotJs,
+  SiNextdotjs,
   SiDigitalocean,
   SiMysql,
   SiPostgresql,
@@ -122,7 +122,7 @@ export default function SkillsSection() {
               <FaReact data-tip="React" />
               <FaAngular data-tip="Angular" />
               <FaNode data-tip="Express" />
-              <SiNextDotJs data-tip="Next.js" />
+              <SiNextdotjs data-tip="Next.js" />
               <SiIonic data-tip="Ionic" />
             </SkillsBlock>
             <SkillsBlock title="Databases">
