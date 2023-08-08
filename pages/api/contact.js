@@ -3,6 +3,8 @@ const rateLimit = require('express-rate-limit');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+export const runtime = 'edge';
+
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 minutes
   max: 2,
