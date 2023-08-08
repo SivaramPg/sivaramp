@@ -85,10 +85,8 @@ export default function NavDropDown() {
 
 function NavLink({ href, children, onClick = () => null }) {
   return (
-    <Link href={href}>
-      <a onClick={onClick}>
-        <li>{children}</li>
-      </a>
+    <Link href={href} onClick={onClick}>
+      <li>{children}</li>
     </Link>
   );
 }

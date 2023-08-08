@@ -112,29 +112,68 @@ export default function SkillsSection() {
           <SectionTitle>Skills</SectionTitle>
           <div className="skills-container">
             <SkillsBlock title="Programming Languages">
-              <ImHtmlFive data-tip="HTML5" />
-              <FaCss3Alt data-tip="CSS" />
-              <SiJavascript data-tip="Javascript" />
-              <AiOutlineConsoleSql data-tip="SQL" />
-              <FaPython data-tip="Python" />
+              <ImHtmlFive
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <FaCss3Alt data-tooltip-id="tooltip" data-tooltip-content="CSS" />
+              <SiJavascript
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <AiOutlineConsoleSql
+                data-tooltip-id="tooltip"
+                data-tooltip-content="SQL"
+              />
+              <FaPython
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Python"
+              />
             </SkillsBlock>
             <SkillsBlock title="Frameworks">
-              <FaReact data-tip="React" />
-              <FaAngular data-tip="Angular" />
-              <FaNode data-tip="Express" />
-              <SiNextdotjs data-tip="Next.js" />
-              <SiIonic data-tip="Ionic" />
+              <FaReact data-tooltip-id="tooltip" data-tooltip-content="React" />
+              <FaAngular
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Angular"
+              />
+              <FaNode
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Express"
+              />
+              <SiNextdotjs
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Next.js"
+              />
+              <SiIonic data-tooltip-id="tooltip" data-tooltip-content="Ionic" />
             </SkillsBlock>
             <SkillsBlock title="Databases">
-              <SiMysql data-tip="MySQL" />
-              <SiPostgresql data-tip="PostgreSQL" />
-              <SiMongodb data-tip="MongoDB" />
+              <SiMysql data-tooltip-id="tooltip" data-tooltip-content="MySQL" />
+              <SiPostgresql
+                data-tooltip-id="tooltip"
+                data-tooltip-content="PostgreSQL"
+              />
+              <SiMongodb
+                data-tooltip-id="tooltip"
+                data-tooltip-content="MongoDB"
+              />
             </SkillsBlock>
             <SkillsBlock title="Cloud Providers">
-              <FaAws data-tip="Amazon Web Services" />
-              <SiDigitalocean data-tip="DigitalOcean" />
-              <SiFirebase data-tip="Firebase" />
-              <SiHeroku data-tip="Heroku" />
+              <FaAws
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Amazon Web Services"
+              />
+              <SiDigitalocean
+                data-tooltip-id="tooltip"
+                data-tooltip-content="DigitalOcean"
+              />
+              <SiFirebase
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Firebase"
+              />
+              <SiHeroku
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Heroku"
+              />
             </SkillsBlock>
           </div>
         </Container>

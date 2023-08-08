@@ -12,7 +12,7 @@ import { respondTo } from '../utils/respondTo';
 
 const NavbarWrapper = styled.nav`
   width: 100%;
-  max-height: ${(props) => (props.showNavDropDown ? '100vh' : '72px')};
+  max-height: ${(props) => (props.$showNavDropDown ? '100vh' : '72px')};
 
   transition: max-height 0.25s ease-in-out;
   overflow: hidden;
@@ -99,12 +99,10 @@ export default function Navbar() {
   const [showNavDropDown, setShowNavDropDown] = useState(false);
 
   return (
-    <NavbarWrapper showNavDropDown={showNavDropDown}>
+    <NavbarWrapper $showNavDropDown={showNavDropDown}>
       <Container>
         <Link href="/">
-          <a>
-            <img src="/logo.svg" alt="logo" />
-          </a>
+          <img src="/logo.svg" alt="logo" />
         </Link>
         <ul className="nav-links">
           <NavLink
@@ -144,10 +142,8 @@ export default function Navbar() {
 
 function NavLink({ href, children, onClick = () => null }) {
   return (
-    <Link href={href}>
-      <a onClick={onClick}>
-        <li>{children}</li>
-      </a>
+    <Link href={href} onClick={onClick}>
+      <li>{children}</li>
     </Link>
   );
 }

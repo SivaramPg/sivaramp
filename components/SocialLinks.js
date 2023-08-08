@@ -32,7 +32,8 @@ export function GithubSocialLink({ size }) {
       href="/github"
       target="_blank"
       rel="noreferrer noopener"
-      data-tip="Github"
+      data-tooltip-id="tooltip"
+      data-tooltip-content="Github"
     >
       <SiGithub size={size ? size : '1.25em'} />
     </SocialLinkWrapper>
@@ -45,7 +46,8 @@ export function LinkedInSocialLink({ size }) {
       href="/linkedin"
       target="_blank"
       rel="noreferrer noopener"
-      data-tip="LinkedIn"
+      data-tooltip-id="tooltip"
+      data-tooltip-content="LinkedIn"
     >
       <SiLinkedin size={size ? size : '1.25em'} />
     </SocialLinkWrapper>
@@ -58,7 +60,8 @@ export function MediumSocialLink({ size }) {
       href="/blog"
       target="_blank"
       rel="noreferrer noopener"
-      data-tip="Medium"
+      data-tooltip-id="tooltip"
+      data-tooltip-content="Medium"
     >
       <SiMedium size={size ? size : '1.25em'} />
     </SocialLinkWrapper>
@@ -71,7 +74,8 @@ export function CodepenSocialLink({ size }) {
       href="/codepen"
       target="_blank"
       rel="noreferrer noopener"
-      data-tip="Codepen"
+      data-tooltip-id="tooltip"
+      data-tooltip-content="Codepen"
     >
       <SiCodepen size={size ? size : '1.25em'} />
     </SocialLinkWrapper>
@@ -85,7 +89,8 @@ export function EmailSocialLink({ size }) {
         href="/mail"
         target="_blank"
         rel="noreferrer noopener"
-        data-tip="Email"
+        data-tooltip-id="tooltip"
+        data-tooltip-content="Email"
       >
         <SiMaildotru size={size ? size : '1.25em'} />
       </SocialLinkWrapper>

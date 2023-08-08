@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-tooltip/dist/react-tooltip.css';
 
-const ReactTooltip = dynamic(() => import('react-tooltip'), { ssr: false });
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -58,7 +58,7 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-        <ReactTooltip effect="solid" place="top" type="dark" />
+        <ReactTooltip id="tooltip" effect="solid" place="top" type="dark" />
       </ThemeProvider>
     </>
   );
