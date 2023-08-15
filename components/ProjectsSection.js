@@ -31,6 +31,12 @@ export default function ProjectsSection() {
         <SectionTitle>Projects</SectionTitle>
         <div className="projects">
           <ProjectCard
+            thumbnail="/swapi-info.png"
+            title="Swapi.info"
+            websiteUrl="https://swapi.info/"
+            githubUrl="/github/swapi.info"
+          />
+          <ProjectCard
             thumbnail="/url-masker.png"
             title="URL Masker"
             websiteUrl="https://url-masker.sivaramp.com/"
@@ -48,15 +54,9 @@ export default function ProjectsSection() {
             websiteUrl="https://snake.sivaramp.com/"
             githubUrl="/github/JS_Snake_Game"
           />
-          {/* <ProjectCard
-            thumbnail="/swapi-ssg.png"
-            title="SWAPI-SSG"
-            websiteUrl="https://starwars.sivaramp.com/"
-            githubUrl="/github/swapi-ssg"
-          /> */}
           <ProjectCard
             thumbnail="/swapi-deux.png"
-            title="Star Wars API"
+            title="Swapi Characters"
             websiteUrl="https://swapi-deux.sivaramp.com/"
             githubUrl="/github/swapi-deux"
           />

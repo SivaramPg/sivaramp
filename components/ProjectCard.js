@@ -15,7 +15,7 @@ const ProjectCardWrapper = styled.div`
 
   margin: 20px;
 
-  :hover {
+  &:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
@@ -33,10 +33,10 @@ const ProjectCardWrapper = styled.div`
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: all 0.1s ease-in-out;
       cursor: pointer;
+    }
 
-      :hover {
-        filter: brightness(0.75);
-      }
+    &:hover {
+      filter: brightness(0.75);
     }
   }
 
@@ -77,7 +77,7 @@ const ProjectCardWrapper = styled.div`
       background-color: black;
       color: white;
 
-      :hover {
+      &:hover {
         background-color: #00000005;
         color: black;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
