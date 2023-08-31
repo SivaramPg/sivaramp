@@ -39,7 +39,7 @@ export default function ProjectsSection() {
           <ProjectCard
             thumbnail="/url-masker.png"
             title="URL Masker"
-            websiteUrl="https://url-masker.sivaramp.com/"
+            websiteUrl="https://anonimizer.sivaramp.com/"
             githubUrl="/github/url-masker"
           />
           <ProjectCard
