@@ -31,6 +31,12 @@ export default function ProjectsSection() {
         <SectionTitle>Projects</SectionTitle>
         <div className="projects">
           <ProjectCard
+            thumbnail="/anaek-desilog.png"
+            title="Anaek Desilog"
+            websiteUrl="https://desilog.sivaramp.com/"
+            githubUrl="/github/desilog"
+          />
+          <ProjectCard
             thumbnail="/swapi-info.png"
             title="Swapi.info"
             websiteUrl="https://swapi.info/"
